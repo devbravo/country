@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="app.css" rel="stylesheet"/>
+    <title>Country JS</title>
+</head>
+<body>
+<div id="countryList">
+  <div class='countryList__Search'>
+    <p>Country</p>
+    <form action=''>
+      <select name='countries' id='countries-list' onchange="addCountryDetails(country, counter)">
+        <option value=''></option>
+      </select>
+      <button type="submit"><i class="search-button"></i>Search</button>
+    </form>
+    <div class='countryList__flag'></div>
+  </div>
+  <div class='countryList__Info'>
+  <div class='countrList__Info--capital'></div>
+  <div class='countrList__Info--borders'></div>
+  </div>
+  <div class='countryList__Region'>
+    <p>Regional</p>
+    <table class='table'>
+      <tr>
+        <th>Acronym</th>
+        <th>name</th>
+      </tr>
+      <tr>
+        <td>Caricom</td>
+        <td>Caribbean Community</td>
+      </tr>
+      <tr>
+        <td>Usan</td>
+        <td>Union of South American Nations</td>
+      </tr>
+    </table>
+  </div>
+  <div class='countryList__Map'>
+    Map
+  </div>
+
+</div>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

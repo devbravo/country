@@ -1,0 +1,16 @@
+.clr {
+    color: blueviolet;
+    background-color: aqua;
+}
+
+.displayInline {
+    display: inline; /* the default for span */
+}
+
+.seperator{
+    margin: 10px;
+}
+
+img {
+    margin-left: 10px;
+}
