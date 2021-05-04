@@ -10,50 +10,25 @@ fetch(URL)
 
         let defaultOption = document.createElement('option');
         defaultOption.text = 'Choose country';
-
         countryListDropdown.add(defaultOption);
         countryListDropdown.selectedIndex = 0;
-
 
         let option;
         for (let i = 0; i < data.length; i++) {
             option = document.createElement('option');
             option.text = data[i].name;
-            option.value = data[i];
+            option.value = JSON.stringify(data[i]);
             countryListDropdown.add(option);
         }
-
-        let counter = 1;
-        /*    countryList.forEach(country => {
-              console.log(country.name + '    ' + country.flag);
-              addCountryDetails(country, counter);
-              populate(country);
-              counter++;
-            });*/
     })
     .catch(function (error) {
-        console.log('error message: ' + error);
+        console.log('retrieving country list has failed: ' + error);
     });
 
 function populate(country) {
     const countryList = document.getElementById('countries-list');
     document.getElementById('countries-list').innerHTML = countryList;
 }
-
-/*        let countryList;
-            let xhttp = new XMLHttpRequest();
-            xhttp.open("GET", URL, false); //de call word synchrone uitgevoerd. pas wanneer de call is afgehandeld word de volgende regel uitgevoerd
-            xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    // Response
-                     countryList = JSON.parse(this.responseText);
-                    //console.log(JSON.parse(data));
-
-                }
-            };
-            xhttp.send();
-        countryList.forEach(country => console.log(country.name));*/
 
 function addCountryDetails(country, counter) {
     //add country name
@@ -78,6 +53,6 @@ function addCountryDetails(country, counter) {
 }
 
 function showCountryDetails() {
-    let country = countryListDropdown.value;
+    let country = JSON.parse(countryListDropdown.value);
     console.log(country);
 }
