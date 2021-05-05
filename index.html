@@ -6,18 +6,19 @@
     <title>Country JS</title>
 </head>
 <body>
-<div id="countryList">
+<div id="countryList" >
   <div class='countryList__Search'>
     <p>Country</p>
     <form action=''>
-      <select name='countries' id='countries-list' onchange="addCountryDetails(country, counter)">
-        <option value=''></option>
+      <select name='countries' id='countries-list' onchange="showCountryDetails()" >
       </select>
-      <button type="submit"><i class="search-button"></i>Search</button>
+      <!-- <input type="button"  value='Search'></input> -->
     </form>
-    <div class='countryList__flag'></div>
+    <div id='countryList__flag' >
+      <img id='country-flag' width=60 height=40 >
+     </div>
   </div>
-  <div class='countryList__Info'>
+  <!-- <div class='countryList__Info'>
   <div class='countrList__Info--capital'></div>
   <div class='countrList__Info--borders'></div>
   </div>
@@ -40,7 +41,7 @@
   </div>
   <div class='countryList__Map'>
     Map
-  </div>
+  </div> -->
 
 </div>
 <script type="text/javascript" src="app.js"></script>
