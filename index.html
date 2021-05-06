@@ -3,6 +3,9 @@
   <link rel="shortcut icon" href="#">
     <meta charset="UTF-8">
     <link href="app.css" rel="stylesheet"/>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+
     <title>Country JS</title>
 </head>
 <body>
@@ -41,8 +44,17 @@
       <tbody id='regionalBlocs'></tbody>
     </table>
   </div>
-  <div class='countryList__Map' >
-  </div>
+ 
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic3VyaXRlY2hib3kiLCJhIjoiY2tvZGFjYnhwMDBkbDJ3cGw0c3dhbGhneCJ9.356LKslRODQ6ib_TLZ8q1Q';
+var map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    center: [-74.5, 40], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+});
+</script>
 
 </div>
 <script type="text/javascript" src="app.js"></script>
