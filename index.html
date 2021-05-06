@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <link rel="shortcut icon" href="#">
     <meta charset="UTF-8">
     <link href="app.css" rel="stylesheet"/>
     <title>Country JS</title>
@@ -18,32 +18,34 @@
       <img id='country-flag' width=60 height=40 >
      </div>
   </div>
-  <!-- <div class='countryList__Info'>
-  <div class='countrList__Info--capital'></div>
-  <div class='countrList__Info--borders'></div>
+  <div class='countryList__Info'>
+    <ul id='countryList__Info--capital'>Borders: 
+      <li id='capital'></li>
+      <li id='timezone'></li>
+      <li id='language'></li> 
+      <li id='currency'></li>
+    </ul>
+    <ul class='countryList__Info--borders' id='borders'>
+   </ul>
   </div>
+
   <div class='countryList__Region'>
     <p>Regional</p>
-    <table class='table'>
-      <tr>
-        <th>Acronym</th>
-        <th>name</th>
-      </tr>
-      <tr>
-        <td>Caricom</td>
-        <td>Caribbean Community</td>
-      </tr>
-      <tr>
-        <td>Usan</td>
-        <td>Union of South American Nations</td>
-      </tr>
+    <table class='table' >
+      <thead>
+        <tr>
+          <th>Acronym</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody id='regionalBlocs'></tbody>
     </table>
   </div>
-  <div class='countryList__Map'>
-    Map
-  </div> -->
+  <div class='countryList__Map' id='googleMap'>
+  </div>
 
 </div>
 <script type="text/javascript" src="app.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
 </body>
 </html>
