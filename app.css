@@ -1,16 +1,28 @@
 .clr {
-    color: blueviolet;
-    background-color: aqua;
+  color: blueviolet;
+  background-color: aqua;
 }
 
 .displayInline {
-    display: inline; /* the default for span */
+  display: inline; /* the default for span */
 }
 
-.seperator{
-    margin: 10px;
+.seperator {
+  margin: 10px;
 }
 
 img {
-    margin-left: 10px;
+  margin-left: 10px;
+}
+
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
