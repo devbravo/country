@@ -3,15 +3,14 @@
 <html lang="en">
   <link rel="shortcut icon" href="#">
     <meta charset="UTF-8">
-    <!-- <link href="app.css" rel="stylesheet"/> -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" type="text/css" href="./app.css" />
     <title>Country JS</title>
 </head>
 <body>
-<div id="countryList" >
+<div class='countryList' >
+  <p class='countryList__title'>Country</p>
   <div class='countryList__Search'>
-    <p>Country</p>
     <form action=''>
       <select name='countries' id='countries-list' onchange="showCountryDetails()" >
       </select>
@@ -21,6 +20,7 @@
       <img id='country-flag' width=60 height=40 >
      </div>
   </div>
+
   <div class='countryList__Info'>
     <ul id='countryList__Info--capital'>
       <li id='capital'></li>
@@ -30,8 +30,7 @@
     </ul>
     <p>Borders:</p>
     <ul class='countryList__Info--borders' id='borders'>
-       
-   </ul>
+    </ul>
   </div>
 
   <div class='countryList__Region'>
@@ -52,6 +51,6 @@
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSu-tuvnzC0in7DSN6jKhdiFkjJfRcn0Y&callback=initMap&libraries=&v=weekly"
 async
 ></script>
-<script type="text/javascript" src="app.js"></script>
-</body>
+ <script type="text/javascript" src="app.js"></script>
+ </body>
 </html>

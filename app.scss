@@ -1,0 +1,33 @@
+img {
+  margin-left: 10px;
+}
+
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.countryList {
+  margin: 1rem auto 0 auto;
+  background: linear-gradient(to right, #00d9ff, #892fff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+  height: 100%;
+
+  border: 1px solid #000;
+
+  p {
+    font-size: 2rem;
+  }
+}
