@@ -1,4 +1,4 @@
-const countryList_div = document.getElementById('countryList');
+//const countryList_div = document.getElementById('countryList');
 const countryListDropdown = document.getElementById('countries-list');
 const countryFlag = document.getElementById('country-flag');
 const countryCapital = document.getElementById('capital');
@@ -70,4 +70,17 @@ const showCountryDetails = () => {
     cell1.innerText = data.acronym;
     cell2.innerText = data.name;
   });
+
+  initMap(parseFloat(country.latlng[0]), parseFloat(country.latlng[1]));
 };
+
+let map;
+
+function initMap(lat = 0, lng = 0) {
+  console.log(lat, lng);
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: lat, lng: lng },
+    zoom: 5,
+    mapTypeId: google.maps.MapTypeId.HYBRID,
+  });
+}
