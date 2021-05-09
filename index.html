@@ -9,31 +9,33 @@
 </head>
 <body>
 <div class='countryList' >
-  <p class='countryList__title'>Country</p>
-  <div class='countryList__Search'>
-    <form action=''>
+  <div class='countryList__search'>
+    <form action='' class='countries-select'>
+      <p class='countryList__title'>Country</p>
       <select name='countries' id='countries-list' onchange="showCountryDetails()" >
       </select>
       <!-- <input type="button"  value='Search'></input> -->
     </form>
-    <div id='countryList__flag' >
-      <img id='country-flag' width=60 height=40 >
-     </div>
+  
+      <img id='country-flag'>
+    
   </div>
 
-  <div class='countryList__Info'>
-    <ul id='countryList__Info--capital'>
+  <div class='countryList__info'>
+    <ul id='countryList__info--capital'>
       <li id='capital'></li>
       <li id='timezone'></li>
       <li id='language'></li> 
       <li id='currency'></li>
     </ul>
-    <p>Borders:</p>
-    <ul class='countryList__Info--borders' id='borders'>
-    </ul>
+    <div class='countryList__info--borders' >
+      <p>Borders:</p>
+      <ul id='borders'>
+      </ul>
+    </div>
   </div>
 
-  <div class='countryList__Region'>
+  <div class='countryList__region'>
     <p>Regional</p>
     <table class='table' >
       <thead>
@@ -45,7 +47,7 @@
       <tbody id='regionalBlocs'></tbody>
     </table>
   </div>
-  <div id="map" style="width: 40rem; height: 20rem"; ></div>
+  <div id="map" style="width: 35rem; height: 20rem"; ></div>
 </div>
 <script defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSu-tuvnzC0in7DSN6jKhdiFkjJfRcn0Y&callback=initMap&libraries=&v=weekly"
