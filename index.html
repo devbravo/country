@@ -1,34 +1,30 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <link rel="shortcut icon" href="#">
-    <meta charset="UTF-8">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" type="text/css" href="./app.css" />
-    <title>Country JS</title>
+<link rel="shortcut icon" href="#">
+<meta charset="UTF-8">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<link rel="stylesheet" type="text/css" href="./app.css"/>
+<title>Country JS</title>
 </head>
 <body>
-<div class='countryList' >
+<div class='countryList'>
   <div class='countryList__search'>
     <form action='' class='countries-select'>
       <p class='countryList__title'>Country</p>
-      <select name='countries' id='countries-list' onchange="showCountryDetails()" >
+      <select name='countries' id='countries-list' onchange="showCountryDetails()">
       </select>
-      <!-- <input type="button"  value='Search'></input> -->
     </form>
-  
-      <img id='country-flag'>
-    
+    <img id='country-flag'>
   </div>
 
   <div class='countryList__info'>
     <ul id='countryList__info--capital'>
       <li id='capital'></li>
       <li id='timezone'></li>
-      <li id='language'></li> 
+      <li id='language'></li>
       <li id='currency'></li>
     </ul>
-    <div class='countryList__info--borders' >
+    <div class='countryList__info--borders'>
       <p>Borders:</p>
       <ul id='borders'>
       </ul>
@@ -37,22 +33,22 @@
 
   <div class='countryList__region'>
     <p>Regional</p>
-    <table class='table' >
+    <table class='table'>
       <thead>
-        <tr>
-          <th>Acronym</th>
-          <th>Name</th>
-        </tr>
+      <tr>
+        <th>Acronym</th>
+        <th>Name</th>
+      </tr>
       </thead>
       <tbody id='regionalBlocs'></tbody>
     </table>
   </div>
-  <div id="map" style="width: 35rem; height: 20rem"; ></div>
+  <div id="map" style="width: 35rem; height: 20rem" ;></div>
 </div>
 <script defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSu-tuvnzC0in7DSN6jKhdiFkjJfRcn0Y&callback=initMap&libraries=&v=weekly"
-async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSu-tuvnzC0in7DSN6jKhdiFkjJfRcn0Y&callback=initMap&libraries=&v=weekly"
+        async
 ></script>
- <script type="text/javascript" src="app.js"></script>
- </body>
+<script type="text/javascript" src="app.js"></script>
+</body>
 </html>
